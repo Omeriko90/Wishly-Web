@@ -16,9 +16,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
-const uri: string =
-  process.env.MONGODB_URI ||
-  "mongodb+srv://omerdomb51:<Yarden5190!>@mygiftlistdb.tdwi6xc.mongodb.net/";
+const uri: string = process.env.MONGODB_URI || "";
 
 (async () => {
   try {
@@ -33,7 +31,6 @@ app.use("/list", list);
 app.use("/user", user);
 app.use("/public", PublicRouter);
 app.get("/*", (_req: Request, res: Response) => {
-  console.log(__dirname);
   res.sendFile(path.join(__dirname, "../../Client/index.html"));
 });
 

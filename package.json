@@ -1,8 +1,11 @@
 {
     "scripts": {
         "install": "cd Client && npm install && cd ../Api && npm install",
-        "start": "cd Api && npm run start",
+        "start": "concurrently \"npm run server\" \"npm run client\"",
         "server": "cd Api && npm run start",
         "client": "cd Client && npm run start"
+    },
+    "dependencies": {
+        "concurrently": "^9.0.1"
     }
 }
