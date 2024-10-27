@@ -1,9 +1,9 @@
 import { useFieldArray, useForm } from "react-hook-form";
 import Wish from "src/types/wish";
-import WishForm from "./WishFrom";
 import { useState } from "react";
 import { Button, CircularProgress, List, ListItem } from "@mui/material";
 import { Add } from "@mui/icons-material";
+import WishForm from "src/components/common/WishForm";
 
 export interface FormValues {
   wishes: Wish[];

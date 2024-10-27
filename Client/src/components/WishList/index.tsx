@@ -3,7 +3,7 @@ import useGetListWishes from "src/hooks/useGetListWishes";
 import { default as WishType } from "src/types/wish";
 import Wish from "src/components/WishList/Wish";
 import { useState } from "react";
-import WishDetailsDialog from "./WishDetailsDialog";
+import WishDetailsDialog from "src/components/WishList/WishDialogDetails";
 
 interface WishListProps {
   listId: string;
