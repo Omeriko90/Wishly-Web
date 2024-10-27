@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "install": "cd client && npm install && cd ../server && npm install",
+        "start": "cd Api && npm run start",
+        "server": "cd server && nodemon app.js",
+        "client": "cd client && npm start"
+    }
+}
