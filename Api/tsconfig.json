@@ -14,7 +14,7 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "exclude": ["node_modules", "dist", "client"],
+  "exclude": ["node_modules", "dist", "client", ".env"],
   "ts-node": {
     "require": ["tsconfig-paths/register"]
   }
