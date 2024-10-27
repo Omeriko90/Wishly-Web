@@ -1,6 +1,7 @@
 {
     "scripts": {
         "install": "cd Client && npm install && cd ../Api && npm install",
+        "build": "concurrently \"cd Client && npm run build\" \"cd Api && npm run build\"",
         "start": "concurrently \"npm run server\" \"npm run client\"",
         "server": "cd Api && npm run start",
         "client": "cd Client && npm run start"
