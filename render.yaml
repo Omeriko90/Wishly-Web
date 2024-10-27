@@ -1,0 +1,32 @@
+services:
+  - type: web
+    env: node
+    name: backend
+    repo: https://github.com/Omeriko90/Wishly-Web
+    buildFilter:
+      paths:
+        - Api/**
+    buildCommand: npm && npm build --filter=backend
+    startCommand: cd ./Api; npm run start
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: backend
+          property: connectionString
+
+  - type: web
+    env: static
+    name: frontend
+    repo: https://github.com/Omeriko90/Wishly-Web
+    buildFilter:
+      paths:
+        - Client/**
+    buildCommand: npm && npm build --filter=frontend
+    staticPublishPath: ./Client/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+databases:
+  - name: backend
