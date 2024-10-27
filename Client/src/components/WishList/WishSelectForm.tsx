@@ -1,7 +1,7 @@
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import useSelectWish from "src/hooks/useSelectWIsh";
+import useSelectWish from "src/hooks/useSelectWish";
 import Confetti from "src/components/common/Confetti";
 export interface SelectWishFormValues {
   fullName: string;
