@@ -31,7 +31,7 @@ app.use("/list", list);
 app.use("/user", user);
 app.use("/public", PublicRouter);
 app.get("/*", (_req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, "../../Client/index.html"));
+  res.redirect("http://10.217.94.87:5173/");
 });
 
 app.get("/health", (_req: Request, res: Response) => {
