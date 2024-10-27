@@ -32,9 +32,10 @@ const uri: string =
 app.use("/list", list);
 app.use("/user", user);
 app.use("/public", PublicRouter);
-app.get("/*", (_req: Request, res: Response) =>
-  res.sendFile(path.join(__dirname, "index.html"))
-);
+app.get("/*", (_req: Request, res: Response) => {
+  console.log(__dirname);
+  res.sendFile(path.join(__dirname, "../../Client/index.html"));
+});
 
 app.get("/health", (_req: Request, res: Response) => {
   res.status(200).send("Server is running");
